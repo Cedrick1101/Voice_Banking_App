@@ -1,0 +1,155 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 May 2022, 2:40:49 PM
+    Author     : acer
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+.contact-bg{
+    height: 40vh;
+   background-image: linear-gradient(
+    120deg,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)), url(image/contact-bg.jpg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-bg h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.contact-bg h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: #f7327a;
+    border-radius: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: #f7327a;
+    border-radius: 50%;
+}
+.text{
+    font-weight: 300;
+    opacity: 0.9;
+}
+.contact-bg .text{
+    margin: 1.6rem 0;
+}
+.secondTable{
+ alignment-adjust:central;
+  width: 50%;
+  padding-bottom:50px;
+  margin-bottom: 50px;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+
+/* Clearfix (clear floats) */
+.secondTable::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  height: 30vh;
+}
+.footer-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.menu > a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.social-container {
+  margin-top: 3rem;
+}
+.social-container > img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.footer-container > button {
+  margin-top: 3rem;
+  padding: 12px 28px;
+  border: none;
+  outline-width: 0;
+  color: white;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 400;
+  background-image: linear-gradient(
+    120deg,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)
+  );
+}

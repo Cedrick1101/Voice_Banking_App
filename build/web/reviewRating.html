@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Star Survey |Rating  </title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+        
+    <section class = "contact-section">
+      <div class = "contact-bg">
+        <h3>Give us your opinion</h3>
+        <h2>SURVEY|RATING</h2>
+        <div class = "line">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p class = "text">----Please rate us!This is going to help us improve the performance our of system so that we will be able to provide you a good service to ensure an excellent experience!------</p>
+      </div>
+
+      
+    <div class="container">
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" id="description" placeholder="Describe your experience.."></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+    </script>
+         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+
+    
+    <script>
+        if (annyang) {
+console.log("we have annyang");
+var commands = {
+'go to menu': menu,
+'description *tag': description
+}
+
+function menu() {
+console.log("Menu");
+window.location.href = "http://localhost:8080/VoiceBankingApp/menu.html";
+}
+function description(variable) {
+     var description = document.getElementById("description");
+     description.value=variable;
+}
+
+// Add Commands
+annyang.addCommands(commands);
+
+// Start listening
+annyang.start();
+}
+    </script>  
+  </body>
+</html>

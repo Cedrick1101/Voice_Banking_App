@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="./style2.css">
+<script src="sweetalert2.min.js"></script>
+
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+    </head>
+    <body>
+        
+        <form action="LoginServlet.do" method="POST">
+        <!-- partial:index.partial.html -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+                    <h1> <span style="color:#006400">Hey Smart</span><span style="color:blue">Tech</span>!!</h1>
+                
+                <p style="color:black">Welcome To our Website Bank App .It is a easy bank App use to effectuate transaction and print invoices of <br>
+                the Customer and the employees product and  </p>
+		<div class="buttn">			
+			<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook</a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with  Twitter  </a>
+		</div>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h5>LOGIN</h5>
+		<p>Don't have an account? <a href="registeruser.jsp">Create Your Account</a> it takes less than a minute</p>
+              
+		<div class="inputs">
+			<input type="text" id="email" name="id" placeholder="Enter username" required>
+			<br>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+		</div>
+			
+			<br><br>
+			
+		<div class="remember-me--forget-password">		
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label>
+			<p><a href="#">forget password?</a></p>
+		</div>
+			
+			<br>
+			<button onClick="popUp()" style="background-image: linear-gradient(120deg, hsl(192, 70%, 51%),hsl(136, 65%, 51%)); ">Login</button>
+	</div>
+
+</div>
+<!-- partial -->
+  </form>
+   
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+    <script>
+   function popUp(){
+ Swal.fire(
+  'Sucess!',
+  'You have login sucessfully!',
+  'success'
+ 
+)
+       }
+    </script>
+        
+ <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script>
+    if (annyang) {
+        
+        console.log("it working!");
+        
+       
+      // Let's define our first command. First the text we expect, and then the function it should call
+      let commands = {
+        'write username *tag': function(variable){
+            let email = document.getElementById("email");
+            email.value = variable.split(" ").join(""); 
+        },
+         'write password *tag': function(variable){
+            let password = document.getElementById("password");
+            password.value = variable; 
+        }
+      };
+    
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+      
+      // Start listening. You can call this here, or attach this call to an event, button, etc.
+      annyang.start();
+      
+    }
+    </script>
+
+    </body>
+</html>

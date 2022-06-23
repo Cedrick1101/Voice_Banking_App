@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 May 2022, 2:13:21 PM
+    Author     : acer
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+.contact-bg{
+    height: 40vh;
+   background-image: linear-gradient(
+    120deg,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)), url(image/contact-bg.jpg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-bg h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.contact-bg h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: #f7327a;
+    border-radius: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: #f7327a;
+    border-radius: 50%;
+}
+.text{
+    font-weight: 300;
+    opacity: 0.9;
+}
+.contact-bg .text{
+    margin: 1.6rem 0;
+}
+input{
+    display: block;
+    margin: 2em auto;
+    border: none;
+    padding: 0;
+    width: 10.5ch;
+    background: repeating-linear-gradient(90deg, dimgrey 0 , dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 10ch 2px no-repeat;
+    font: 5ch droid sans mono, consolas, monospace;
+    letter-spacing: 0.5ch;
+}
+input:focus{
+    outline: none;
+    color: dodgerblue;
+}
+
+.btn{
+    color: white;
+    background-color: orange;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: auto;
+    left: 45%;
+    transition: 0.5s;
+    border: none;
+    border-radius: 15px;
+}
+.btn:hover{
+    color: white;
+    background-color: orange;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: auto;
+    left: 45%;
+    transition: 0.5s;
+    border: none;
+    border-radius: 5px;
+}
