@@ -15,7 +15,7 @@ import javax.persistence.Table;
  *
  * @author acer
  */
-@Table(name="Admin_TBL")
+@Table(name="Admin_TBL", schema = "test_db")
 @Entity
 public class Admin implements Serializable {
     private static final long serialVersionUID = 1L;
