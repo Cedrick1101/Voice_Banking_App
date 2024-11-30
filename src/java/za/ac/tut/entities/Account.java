@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author acer
  */
 @Entity
-@Table(name="Account_TBL")
+@Table(name="Account_TBL", schema = "test_db")
 public class Account implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
